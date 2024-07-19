@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="listing.css">
+</head>
+
+<body>
+    <div class="listing_container">
+        <div class="nav_wrapper" id="nav-wrapper">
+            <div class="nav_bar" id="nav-bar">
+                <p><a href="index.html">BoxCars</a></p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="listing.html">Listings</a></li>
+                    <li><a href="index.html#choose-me">About</a></li>
+                    <li>
+                        <h4><a href="index.html#contact-left">Contact</a></h4>
+                    </li>
+                </ul>
+                <div class="menu">
+                    <img src="../../assets/menu1.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="search_bar">
+            <div class="condition">
+                <div id="condition_toggle_btn">
+                    <span id="condition_filter_name">Condition</span>
+                    <img src="assets/dropdown.png">
+                </div>
+                <ul class="search_ul condition_ul">
+                    <li class="search_li search_condition_li">Best</li>
+                    <li class="search_li search_condition_li">Mid</li>
+                    <li class="search_li search_condition_li">Low</li>
+                </ul>
+            </div>
+            <div class="price" id="price-active">
+                <div id="price_toggle_btn">
+                    <span id="price_filter_name">Price </span>
+                    <img src="assets/dropdown.png">
+                </div>
+                <ul class="search_ul">
+                    <li class="search_li search_price_li">&lt; 50000</li>
+                    <li class="search_li search_price_li">&lt; 60000</li>
+                    <li class="search_li search_price_li">&lt; 70000</li>
+                </ul>
+            </div>
+            <div class="find_btn" id="find-btn">
+                <p>Find Cars</p>
+                <img src="assets/f1.png" alt="">
+            </div>
+        </div>
+        <div class="listings">
+            <h1>Listings</h1>
+            <div class="car_cards_container">
+                <div class="car_cards" id="car-cards">
+                    <!-- Car cards will be dynamically inserted here -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="nav_btn" id="nav-btn">
+        <img id="nav-left-btn" src="assets/left.png" alt="">
+        <img id="nav-right-btn" src="assets/right.png" alt="">
+    </div>
+
+    <div class="footer">
+        <div class="footer_contents">
+            <div class="footer_title">
+                <h1>Join Boxcars</h1>
+                <p>Receive updates, shoping tips & more</p>
+            </div>
+            <div class="mail_button">
+                <input type="text" placeholder="Enter your email">
+                <button>Sign up</button>
+            </div>
+        </div>
+
+        <div class="footer_bottom">
+            <p>© 2024 Boxcars.com. All rights reserved.</p>
+            <div class="terms">
+                <p>Terms and conditions</p>
+                <p>Privacy notice</p>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="listing-script.js"></script>
+</body>
+
+</html>

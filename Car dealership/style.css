@@ -1,0 +1,1715 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600;700&display=swap');
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    background-color: #050B20;
+}
+
+.container {
+
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.nav_wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.nav_bar {
+    position: fixed;
+    width: 100%;
+    max-width: 1350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    transition: width 0.6s ease-in-out, padding 0.3s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.3s ease-in-out, border 0.2s ease-in-out;
+}
+
+.nav_shrink {
+    padding: 10px;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.9) 0px 18px 36px -18px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: width 0.5s ease-in-out, padding 0.3s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.3s ease-in-out, border 0.2s ease-in-out;
+}
+
+.nav_bar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_bar ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.nav_bar ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 0 20px;
+    font-size: 1em;
+    transition: color 0.3s;
+    background: transparent;
+}
+
+.nav_bar ul li a:hover {
+    color: #ff6e00;
+}
+
+.nav_bar p {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    color: #ff6e00;
+}
+
+.nav_bar button {
+    border: none;
+}
+
+.nav_bar p a {
+    text-decoration: none;
+    color: #ff6e00;
+}
+
+.nav_bar h4 {
+    border: 0.5px solid rgb(255, 255, 255);
+    color: #ff6e00;
+    border-radius: 20px;
+    padding: 5px 15px;
+    background-color: #000000;
+}
+
+.nav_bar li h4 a {
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    z-index: 100;
+    color: #ff6e00;
+    margin: 0;
+    padding: 0;
+    background-color: none;
+}
+
+.index_content {
+    position: relative;
+    top: 100px;
+    margin: 0 100px;
+}
+
+.hero_section {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.hero_section img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+
+@keyframes slideUpFadeIn {
+    from {
+        transform: translateY(10vh);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.hero_section h4 {
+    position: absolute;
+    top: 150px;
+    padding-bottom: 40px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: white;
+    opacity: 0;
+    animation: slideUpFadeIn 1s ease-out forwards;
+    animation-delay: 0.6s;
+}
+
+.hero_section h1 {
+    position: absolute;
+    top: 170px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: white;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: slideUpFadeIn 1s ease-out forwards;
+    animation-delay: 1s;
+
+}
+
+.hero_section h1 span {
+    color: #ff6e00;
+}
+
+.model {
+    width: 100%;
+    overflow: hidden;
+}
+
+.model h1 {
+    margin-top: 20px;
+    opacity: 0;
+    color: #ffffff;
+    transform: translateY(2vh);
+    transition: opacity 0.3s ease-in-out 0.3s, transform 0.3s ease-in-out;
+}
+
+.model_appear h1 {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    color: #ffffff;
+}
+
+.model h1 {
+    display: grid;
+    place-items: center;
+    text-transform: capitalize;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.model_img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.car {
+    display: grid;
+    place-items: center;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.car img {
+    width: 150px;
+    cursor: pointer;
+}
+
+.car {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.6s ease;
+}
+
+.car_appear {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.car img:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.car a {
+    text-decoration: none;
+    text-align: center;
+}
+
+
+.buy_sell button a {
+    text-decoration: none;
+    color: white;
+
+}
+
+
+
+.car p {
+    z-index: 1000;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+}
+
+.car:hover p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #ff6e00;
+}
+
+
+.choose_me {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    background-color: #13225891;
+    backdrop-filter: blur(40px);
+    background-size: cover;
+    background-position: center;
+    font-family: "Poppins", sans-serif;
+    margin: 40px 0;
+    border-radius: 20px;
+}
+
+.choose_me h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    text-transform: capitalize;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.choose_cards {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.choose_card {
+    background-color: white;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    min-width: 28%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    transition: all 0.3s ease;
+}
+
+.choose_card:hover {
+    transform: scale(1.05);
+}
+
+.choose_card img {
+    width: 40px;
+    padding: 6px;
+    background-color: #132258;
+    border-radius: 10px;
+}
+
+.card-text h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    text-transform: capitalize;
+}
+
+.card-text p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.search_title {
+    position: relative;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transform: translateY(4vh);
+    transition: all 0.3s ease-in-out;
+}
+
+.searched_title_appear {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.search_title h1 {
+    display: grid;
+    place-items: center;
+    text-transform: capitalize;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    margin: 20px 0;
+    color: #ffffff;
+}
+
+.search_title ul {
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.search_title ul li {
+    max-width: 100%;
+    list-style: none;
+    row-gap: 10px;
+    cursor: pointer;
+}
+
+.search_title p {
+    position: absolute;
+    top: 67px;
+    right: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all 0.6 ease-in-out;
+}
+
+.search_title p a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.6 ease-in-out;
+}
+
+
+.search_title p a:hover {
+    color: #ff6e00;
+}
+
+.car-type-active {
+    color: #ff6e00;
+    transform: scale(1.2);
+    transition: all 0.6s ease-in-out;
+}
+
+.car-type-active hr {
+    border: 1px solid orange;
+    width: 100%;
+    opacity: 1;
+}
+
+.specific_underline {
+    width: 0%;
+    opacity: 0;
+    margin: 0 auto;
+    margin-top: 15px;
+    transition: all 0.6s ease-in-out;
+}
+
+.underline {
+    border: 0.5px solid gray;
+    margin: 3px;
+    padding: 0;
+    opacity: 0.5;
+}
+
+.car_cards {
+    display: flex;
+    transition: transform 0.6s ease;
+    color: white;
+    margin: 20px 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.car_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgb(71, 64, 64);
+    border-radius: 10px;
+    min-width: 23%;
+    margin: 0 1%;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.car-cards-appear {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+
+
+.top img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.middle_1 {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.middle_1 p:nth-child(1) {
+    font-weight: 600;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}
+
+.middle_1 p:nth-child(2) {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.middle_2 {
+    margin: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid #E9E9E9;
+    border-top: 0.5px solid #E9E9E9;
+    padding: 10px;
+
+}
+
+.middle_2 img {
+    width: 18px;
+}
+
+.middle_cmp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle_cmp img {
+    margin: 5px 0;
+}
+
+.middle_cmp p {
+    margin-left: -0.5px;
+    text-wrap: nowrap;
+}
+
+.last {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+
+.last p:nth-child(1) {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+
+.last p:nth-child(2) {
+    cursor: pointer;
+    text-transform: capitalize;
+
+}
+
+.last p a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.nav_btn img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    padding: 5px;
+    margin: 20px 10px;
+    border: 0.5px solid gray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.buy_sell {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.buy_sell,
+.buy,
+.sell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+    margin: 10px 0px;
+    border-radius: 10px;
+}
+
+.buy h3,
+.sell h3 {
+    padding: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: white;
+    width: 70%;
+}
+
+.buy p,
+.sell p {
+    padding: 0px 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+    margin: 0;
+    width: 80%;
+
+}
+
+.buy img,
+.sell img {
+    width: 200px;
+    right: 50%;
+    transform: translateX(-44%);
+
+}
+
+.buy button,
+.sell button {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+    background-color: #183ae4;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.buy button img,
+.sell button img {
+    width: 19px;
+    transform: translateX(40%);
+}
+
+.buy {
+    background-color: #5a76ff;
+    margin-right: 10px;
+}
+
+.sell {
+    background-color: hsla(304, 100%, 68%, 0.692);
+    margin-left: 10px;
+}
+
+.statistics {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 100%;
+
+}
+
+.cars_sale {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.cars_sale p:nth-child(1) {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.testimonials {
+    padding: 0 30px;
+    margin: 0 auto;
+    background-color: #13225891;
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.testimonials h1 {
+    display: grid;
+    place-items: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: white;
+    padding-top: 40px;
+}
+
+.review {
+    min-width: 32%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    overflow: hidden;
+    margin-right: 2%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+
+}
+
+/*23.5px*/
+
+.review_cars {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px -10px 60px -10px;
+    transition: transform 0.6s ease;
+}
+
+.review .review_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.review .review_top h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.review .review_top img {
+    width: 37px;
+}
+
+.review p {
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    flex: 1;
+    /* Allow paragraph to take remaining space */
+    overflow: hidden;
+}
+
+.review .personal_details {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.review .personal_details img {
+    border-radius: 50%;
+    width: 45px;
+    margin-right: 10px;
+}
+
+
+.contact {
+    position: relative;
+    top: 100px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 40px;
+    color: white;
+    overflow: hidden;
+    margin: 0 100px;
+}
+
+.contact_top {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.contact_top h1 {
+    font-family: "Bebas Neue", sans-serif;
+    display: block;
+    font-weight: 400;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.contact_top img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.contact_bottom {
+    display: flex;
+    align-items: flex-start;
+}
+
+.contact_right {
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding: 20px;
+    margin-left: 10px;
+    max-width: 100%;
+}
+
+.contact_left {
+    width: 100%;
+    margin-top: 25px;
+    margin-right: 10px;
+}
+
+.contact_right h1,
+.contact_left h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact_right p,
+.contact_left p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    margin: 20px 0;
+}
+
+.details_partition {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left_column,
+.right_column {
+    width: 48%;
+    /* Adjust width as needed */
+}
+
+
+
+.address h3,
+.social h3,
+.phone h3,
+.email h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.address p,
+.social p,
+.phone p,
+.email p {
+    font-size: 15px;
+}
+
+.link {
+    display: flex;
+    flex-direction: row;
+}
+
+.link p a {
+    text-decoration: none;
+    color: #405FF2;
+    /* Adjust color as needed */
+    padding-right: 10px;
+}
+
+
+
+.form {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-group input[type="text"] {
+    width: 48%;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: white;
+    text-transform: capitalize;
+}
+
+.form-group input[type="email"] {
+    width: 48%;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: white;
+
+}
+
+
+
+textarea#message {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: transparent;
+    resize: vertical;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: white;
+}
+
+.form button {
+    width: 20%;
+    padding: 10px;
+    background-color: #405FF2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.footer {
+    position: relative;
+    top: 120px;
+    margin: 0 100px;
+
+}
+
+.footer h1 {
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+
+}
+
+.footer p {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.footer_contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.mail_button {
+    border: 1px solid gray;
+    border-radius: 30px;
+    padding: 8px 8px;
+
+}
+
+.mail_button input {
+
+    background-color: transparent;
+    padding: 8px 25px;
+    border: none;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    outline: none;
+}
+
+
+.mail_button button {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 30px;
+    background-color: #405FF2;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.footer_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+}
+
+.terms {
+    gap: 20px;
+}
+
+.menu img {
+    width: 30px;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    right: 10px;
+}
+
+
+
+@media screen and (max-width: 940px) {
+    .nav_bar {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 10px 5%;
+        background-color: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.9) 0px 18px 36px -18px;
+        border-radius: 15px;
+        width: 80%;
+        transition: all 0.6s ease;
+    }
+
+    .nav_shrink {
+        border: none;
+    }
+
+    .nav_bar ul {
+        flex-direction: column;
+        margin-top: 100px;
+        display: none;
+        transition: all 0.6s ease;
+        position: absolute;
+        top: 200%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        background-color: hsla(227, 73%, 7%, 0.674);
+        backdrop-filter: blur(10px);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.9) 0px 18px 36px -18px;
+        border-radius: 15px;
+        z-index: 1005;
+        padding: 20px 0;
+    }
+
+    .nav_bar ul li a {
+        margin: 0px 0 60px 0;
+
+    }
+
+    .nav_bar h4 {
+        background-color: transparent;
+        color: white;
+        border: none;
+    }
+
+    .nav_bar p {
+        font-size: 30px;
+    }
+
+    .nav_bar h4 {
+        padding: 3px 10px;
+    }
+
+    .nav_shrink {
+        width: 60%;
+    }
+
+    .menu {
+        display: block !important;
+    }
+
+
+    .index_content {
+        top: 80px;
+        margin: 0 10px;
+    }
+
+    .choose_card {
+        overflow: hidden;
+    }
+
+    .footer {
+        overflow-x: hidden;
+    }
+
+    .hero_section {
+        width: 100%;
+        height: 80vh;
+        object-position: left;
+    }
+
+    .hero_section h4 {
+        top: 120px;
+    }
+
+    .hero_section h1 {
+        top: 150px;
+        font-size: 30px;
+    }
+
+    .model h1 {
+        font-size: 30px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .car {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .car img {
+        width: 180px;
+        margin-right: 10px;
+        overflow-x: hidden;
+    }
+
+    .car p {
+        font-size: 12px;
+    }
+
+    .car:hover p {
+        font-size: 12px;
+    }
+
+    .choose_me {
+        padding: 20px;
+    }
+
+    .choose_me h1 {
+        font-size: 30px;
+    }
+
+    .card-text h2 {
+        font-size: 20px;
+    }
+
+    .card-text p {
+        font-size: 16px;
+    }
+
+    .choose_cards {
+        flex-direction: column;
+    }
+
+    .choose_card {
+        min-width: 100%;
+        margin: 10px;
+    }
+
+    .search_title h1 {
+        font-size: 22px;
+    }
+
+    .search_title ul {
+        width: 100%;
+        justify-content: flex-start;
+        margin-left: 5%;
+
+    }
+
+    .search_title ul li {
+        font-size: 16px;
+        margin-right: 5%;
+    }
+
+    .search_title p {
+        position: absolute;
+        top: 46px;
+        font-size: 16px;
+    }
+
+    .specific_underline {
+        margin-top: 19px;
+    }
+
+    .car_card {
+        min-width: 48%;
+    }
+
+    .buy_sell,
+    .buy,
+    .sell {
+        flex-direction: row;
+
+    }
+
+    .buy,
+    .sell {
+        margin: 10px;
+        width: 100%;
+    }
+
+    .buy h3,
+    .sell h3 {
+        text-wrap: nowrap;
+        width: 100%;
+        font-size: 22px;
+    }
+
+    .buy p,
+    .sell p {
+        font-size: 15px;
+    }
+
+    .buy button img,
+    .sell button img {
+        display: block;
+    }
+
+    .buy img,
+    .sell img {
+        display: none;
+    }
+
+
+    .statistics {
+        flex-wrap: nowrap;
+    }
+
+    .cars_sale {
+        width: 50%;
+    }
+
+    .cars_sale p:nth-child(1) {
+        font-size: 22px;
+    }
+
+    .testimonials h1 {
+        font-size: 22px;
+    }
+
+    .review {
+        min-width: 47%;
+        margin-right: 7%;
+    }
+
+    .review_cars {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 30px -10px 0px -10px;
+        transition: transform 0.6s ease;
+    }
+
+    .contact {
+        margin: 20px 30px 0 30px;
+    }
+
+    .contact_top img {
+        max-width: 100%;
+        height: 300px;
+    }
+
+    .contact_bottom {
+        flex-direction: column;
+    }
+
+    .contact_left h1 {
+        font-size: 22px;
+    }
+
+    .contact_left p {
+        font-size: 12px;
+    }
+
+    .contact_left button {
+        width: 120px;
+    }
+
+    .contact_right {
+        margin-top: 20px;
+    }
+
+    .details_partition {
+        flex-direction: column;
+    }
+
+    .left_column,
+    .right_column {
+        width: 100%;
+    }
+
+    .footer {
+        position: relative;
+        top: 100px;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin: 20px;
+
+    }
+
+    .footer_contents {
+        flex-direction: column;
+        row-gap: 20px;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .footer h1 {
+        font-size: 25px;
+    }
+
+    .mail_button {
+        width: 90%;
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .mail_button input {
+        width: 70%;
+        padding: 8px 0;
+        font-size: 12px;
+    }
+
+    .mail_button button {
+        padding: 8px 10px;
+    }
+
+    .terms {
+        gap: 50px;
+        margin-top: 20px;
+
+    }
+
+    .footer_bottom {
+        flex-direction: column;
+    }
+
+    .footer_bottom p {
+        font-size: 10px;
+    }
+
+
+}
+
+
+
+
+@media screen and (max-width: 480px) {
+    .nav_bar {
+
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 10px 5%;
+        background-color: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.9) 0px 18px 36px -18px;
+        border-radius: 15px;
+        width: 80%;
+        transition: all 0.6s ease;
+    }
+
+    .nav_shrink {
+        border: none;
+    }
+
+
+
+    .nav_bar ul {
+        flex-direction: column;
+        margin-top: 100px;
+        display: none;
+        transition: all 0.6s ease;
+        position: absolute;
+        top: 200%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        background-color: hsla(227, 73%, 7%, 0.674);
+        backdrop-filter: blur(10px);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.9) 0px 18px 36px -18px;
+        border-radius: 15px;
+        z-index: 1005;
+        padding: 20px 0;
+    }
+
+    .nav_bar ul li a {
+        margin: 0px 0 60px 0;
+
+    }
+
+    .nav_bar p {
+        font-size: 30px;
+    }
+
+    .nav_bar h4 {
+        padding: 3px 10px;
+    }
+
+    .nav_shrink {
+        width: 80%;
+    }
+
+    .nav_bar ul li a {
+        margin: 0px 0 60px 0;
+
+    }
+
+    .nav_bar h4 {
+        background-color: none;
+        color: #ffffff;
+    }
+
+    .nav_bar li h4 a {
+        color: white;
+    }
+
+
+    .index_content {
+        top: 60px;
+        margin: 0 10px;
+    }
+
+    .choose_card {
+        overflow: hidden;
+    }
+
+    .footer {
+        overflow-x: hidden;
+    }
+
+    .hero_section {
+        width: 100%;
+        height: 40vh;
+        object-position: left;
+    }
+
+    .hero_section h4 {
+        top: 50px;
+    }
+
+    .hero_section h1 {
+        top: 80px;
+        font-size: 20px;
+    }
+
+    .model h1 {
+        font-size: 22px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .car {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .car img {
+        width: 140px;
+        margin-right: 5px;
+        overflow-x: hidden;
+    }
+
+    .car p {
+        font-size: 12px;
+    }
+
+    .car:hover p {
+        font-size: 12px;
+    }
+
+    .choose_me {
+        padding: 20px;
+    }
+
+    .choose_me h1 {
+        font-size: 22px;
+    }
+
+    .card-text h2 {
+        font-size: 16px;
+    }
+
+    .card-text p {
+        font-size: 12px;
+    }
+
+    .choose_cards {
+        flex-direction: column;
+    }
+
+    .choose_card {
+        min-width: 100%;
+        margin: 10px;
+
+    }
+
+    .search_title h1 {
+        font-size: 22px;
+    }
+
+    .search_title ul {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .search_title ul li {
+        font-size: 12px;
+        margin-right: 10px;
+    }
+
+    .search_title p {
+        position: absolute;
+        top: 5px;
+        font-size: 12px
+    }
+
+    .specific_underline {
+        margin-top: 19px;
+    }
+
+    .car_card {
+        min-width: 98%;
+    }
+
+    .buy_sell,
+    .buy,
+    .sell {
+        flex-direction: column;
+
+    }
+
+    .buy,
+    .sell {
+        margin: 10px;
+    }
+
+    .buy h3,
+    .sell h3 {
+
+        width: 100%;
+    }
+
+    .buy button img,
+    .sell button img {
+        display: block;
+    }
+
+    .buy img,
+    .sell img {
+        display: none;
+    }
+
+    .statistics {
+        flex-wrap: wrap;
+    }
+
+    .cars_sale {
+        width: 50%;
+    }
+
+    .cars_sale p:nth-child(1) {
+        font-size: 22px;
+    }
+
+    .testimonials h1 {
+        font-size: 22px;
+    }
+
+    .review {
+        min-width: 100%;
+        margin-right: 7%;
+    }
+
+    .review_cars {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 30px -10px 0px -10px;
+        transition: transform 0.6s ease;
+    }
+
+    .contact {
+
+        margin: 20px 30px 0 30px;
+    }
+
+    .contact_top img {
+        max-width: 100%;
+        height: 200px;
+    }
+
+    .contact_bottom {
+        flex-direction: column;
+    }
+
+    .contact_left h1 {
+        font-size: 22px;
+    }
+
+    .contact_left p {
+        font-size: 12px;
+    }
+
+    .contact_left button {
+        width: 120px;
+    }
+
+    .contact_right {
+        margin-top: 20px;
+    }
+
+    .details_partition {
+        flex-direction: column;
+    }
+
+    .left_column,
+    .right_column {
+        width: 100%;
+    }
+
+    .footer {
+        position: relative;
+        top: 100px;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin: 20px;
+
+    }
+
+    .footer_contents {
+        flex-direction: column;
+        row-gap: 20px;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .footer h1 {
+        font-size: 25px;
+    }
+
+    .mail_button {
+        width: 90%;
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .mail_button input {
+        width: 70%;
+        padding: 8px 0;
+        font-size: 12px;
+    }
+
+    .mail_button button {
+        padding: 8px 10px;
+    }
+
+    .terms {
+        gap: 50px;
+        margin-top: 20px;
+
+    }
+
+    .footer_bottom {
+        flex-direction: column;
+    }
+
+    .footer_bottom p {
+        font-size: 10px;
+    }
+
+
+}

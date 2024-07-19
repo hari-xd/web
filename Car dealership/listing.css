@@ -1,0 +1,792 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600;700&display=swap');
+
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #050B20;
+    /* Replace with your desired color */
+}
+
+
+
+.listing_container {
+    background-color: #050B20;
+    position: relative;
+}
+
+.nav_wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.nav_bar {
+    position: fixed;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    transition: width 0.6s ease-in-out, padding 0.3s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.3s ease-in-out, border 0.2s ease-in-out;
+}
+
+.nav_shrink {
+    padding: 10px;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.9) 0px 18px 36px -18px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: width 0.5s ease-in-out, padding 0.3s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.3s ease-in-out, border 0.2s ease-in-out;
+}
+
+.nav_bar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_bar ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.nav_bar ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 0 20px;
+    font-size: 1em;
+    transition: color 0.3s;
+    background: transparent;
+}
+
+.nav_bar ul li h4 a {
+    color: #ff6e00;
+}
+
+.nav_bar ul li a:hover {
+    color: #ff6e00;
+}
+
+.nav_bar p {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    color: #ff6e00;
+}
+
+.nav_bar button {
+    border: none;
+}
+
+.nav_bar p a {
+    text-decoration: none;
+    color: #ff6e00;
+}
+
+.nav_bar h4 {
+    border: 0.5px solid rgb(255, 255, 255);
+    color: #ff6e00;
+    border-radius: 20px;
+    padding: 5px 15px;
+    background-color: #000000;
+}
+
+.nav_bar h4 a {
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    z-index: 100;
+    color: #ff6e00;
+    margin: 0;
+    padding: 0;
+    background-color: none;
+}
+
+
+.search_bar {
+    position: relative;
+    top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 8px 10px;
+    border: 1px solid gray;
+    border-radius: 15px;
+
+}
+
+.find_btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: #183ae4;
+    cursor: pointer;
+    padding: 10px 15px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease-in-out;
+    text-wrap: nowrap;
+    width: 100%;
+}
+
+.find_btn p {
+    padding-right: 10px;
+    color: rgb(255, 255, 255);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease-in-out;
+}
+
+.find_btn img {
+    width: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.find_btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #ff6e00;
+    transition: width 0.3s ease-in-out, font-weight 0.3s ease-in-out;
+    z-index: 0;
+}
+
+.find_btn:hover::before {
+    width: 100%;
+}
+
+.find_btn:hover p {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+
+
+
+
+.condition,
+.brand,
+.price {
+    position: relative;
+    margin: 0 20px 0 0;
+    cursor: pointer;
+    width: 110%;
+
+}
+
+
+
+
+.condition span,
+.brand span,
+.price span {
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
+    text-wrap: nowrap;
+
+}
+
+.condition ul,
+.brand ul,
+.price ul {
+    position: absolute;
+    top: 80px;
+    text-wrap: nowrap;
+    left: -8%;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    width: 80%;
+    display: none;
+
+}
+
+.price .search_ul.active {
+    display: block;
+}
+
+.brand .search_ul.active {
+    display: block;
+}
+
+.condition .search_ul.active {
+    display: block;
+}
+
+.condition ul li,
+.brand ul li,
+.price ul li {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-right: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
+    width: 100%;
+    place-content: center;
+    transition: padding-left 0.6s ease;
+}
+
+.condition ul li:hover,
+.brand ul li:hover,
+.price ul li:hover {
+    padding-left: 6px;
+}
+
+#brand_toggle_btn,
+#price_toggle_btn,
+#condition_toggle_btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-right: 0.5px solid gray;
+}
+
+.condition img,
+.brand img,
+.price img {
+    width: 25px;
+    padding: 0 15px;
+}
+
+@keyframes slideUpFadeIn {
+    from {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.listings {
+    position: relative;
+    top: 100px;
+    bottom: -100px;
+    background-color: white;
+    transition: top 0.6s ease;
+    border-radius: 50px;
+    margin: 50px 100px;
+    animation: slideUpFadeIn 1s ease-out forwards;
+}
+
+.listings h1 {
+    display: grid;
+    place-items: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    padding-top: 20px;
+    color: black;
+}
+
+.car_cards {
+    display: flex;
+    flex-wrap: wrap;
+    transition: transform 0.6s ease;
+    margin: 20px 0;
+    width: 100%;
+    position: relative;
+}
+
+.car_condition {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: green;
+    padding: 0px 12px;
+    border-radius: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.not-car-condition {
+    display: none;
+}
+
+.car_card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 0.5px solid #E9E9E9;
+    border-radius: 10px;
+    flex-basis: 20%;
+    margin: 0 auto;
+    opacity: 0;
+    min-width: 10%;
+    transform: translateX(-100%);
+    transition: all 0.6s ease;
+    margin-bottom: 20px;
+    max-height: 400px;
+    background-color: transparent;
+}
+
+.car-cards-appear {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.car_card:hover {
+    box-shadow: rgba(100, 100, 111, 0.8) 0px 7px 29px 0px;
+}
+
+
+.top img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.middle_1 {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.middle_1 p:nth-child(1) {
+    font-weight: 600;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+.middle_1 p:nth-child(2) {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.middle_2 {
+    margin: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid #E9E9E9;
+    border-top: 0.5px solid #E9E9E9;
+    padding: 10px;
+}
+
+.middle_2 img {
+    width: 18px;
+}
+
+.middle_cmp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle_cmp img {
+    margin: 5px 0;
+}
+
+.middle_cmp p {
+    margin-left: -0.5px;
+    text-wrap: nowrap;
+}
+
+.last {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+.last p a {
+    text-decoration: none;
+    color: black;
+}
+
+.last p:nth-child(1) {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.last p:nth-child(2) {
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.nav_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #050B20;
+    position: relative;
+    top: 100px;
+
+}
+
+
+.nav_btn img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    padding: 5px;
+    margin: 20px 10px;
+    border: 0.5px solid gray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.footer {
+    position: relative;
+    top: 120px;
+    margin: 0 100px;
+    animation: slideUpFadeIn 1s ease-out forwards;
+
+}
+
+.footer h1 {
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+
+}
+
+.footer p {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.footer_contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.mail_button {
+    border: 1px solid gray;
+    border-radius: 30px;
+    padding: 8px 8px;
+
+}
+
+.mail_button input {
+
+    background-color: transparent;
+    padding: 8px 25px;
+    border: none;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    outline: none;
+}
+
+
+.mail_button button {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 30px;
+    background-color: #405FF2;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.footer_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+}
+
+.terms {
+    gap: 20px;
+}
+
+.menu img {
+    width: 30px;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    right: 10px;
+}
+
+.nav_btn {
+    display: none;
+}
+
+
+@media screen and (max-width: 940px) {
+    .nav_bar {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 10px 5%;
+        background-color: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.9) 0px 18px 36px -18px;
+        border-radius: 15px;
+        width: 80%;
+        transition: all 0.6s ease;
+    }
+
+    .nav_shrink {
+        border: none;
+    }
+
+    .nav_bar ul li h4 a {
+        color: white;
+    }
+
+    .nav_bar ul {
+        flex-direction: column;
+        margin-top: 100px;
+        display: none;
+        transition: all 0.6s ease;
+        position: absolute;
+        top: 200%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        background-color: hsla(227, 73%, 7%, 0.674);
+        backdrop-filter: blur(10px);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.9) 0px 18px 36px -18px;
+        border-radius: 15px;
+        z-index: 1005;
+        padding: 20px 0;
+    }
+
+    .nav_bar ul li a {
+        margin: 0px 0 60px 0;
+
+    }
+
+    .nav_bar h4 {
+        background-color: transparent;
+        color: white;
+        border: none;
+    }
+
+    .nav_bar p {
+        font-size: 30px;
+    }
+
+    .nav_bar h4 {
+        padding: 3px 10px;
+    }
+
+    .nav_shrink {
+        width: 60%;
+    }
+
+    .menu {
+        display: block !important;
+    }
+
+    .search_bar {
+        width: 80%;
+    }
+
+    .car_card {
+        border: 1px solid #7f7d7d;
+        min-width: 30%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .car_card {
+        min-width: 40%;
+    }
+}
+
+
+
+@media (max-width: 550px) {
+
+    .nav_wrapper,
+    .footer {
+        overflow-x: hidden;
+    }
+
+    .listings {
+        margin: 20px;
+    }
+
+    .search_bar {
+        width: 90%;
+    }
+
+    .find_btn {
+        padding: 8px 15px;
+    }
+
+    .find_btn p {
+        font-size: 12px;
+    }
+
+    .find_btn img {
+        width: 20px;
+
+    }
+
+    .condition,
+    .brand,
+    .price {
+        margin: 0 5px 0 0;
+        width: 100%;
+    }
+
+    .condition span,
+    .brand span,
+    .price span {
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    .condition img,
+    .brand img,
+    .price img {
+        width: 20px;
+        padding: 0 10px;
+    }
+
+    .listings h1 {
+        font-size: 25px;
+    }
+
+    .car_condition {
+        font-size: 12px;
+    }
+
+    .car_card {
+        min-width: 80%;
+    }
+
+    .middle_cmp {
+        margin: 0 10px 0 10px;
+    }
+
+    .middle_cmp p {
+        font-size: 12px;
+    }
+
+    .footer {
+        position: relative;
+        top: 100px;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin: 20px;
+
+    }
+
+    .footer_contents {
+        flex-direction: column;
+        row-gap: 20px;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .footer h1 {
+        font-size: 25px;
+    }
+
+    .mail_button {
+        width: 90%;
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .mail_button input {
+        width: 70%;
+        padding: 8px 0;
+        font-size: 12px;
+    }
+
+    .mail_button button {
+        padding: 8px 10px;
+    }
+
+    .terms {
+        gap: 50px;
+        margin-top: 20px;
+
+    }
+
+    .footer_bottom {
+        flex-direction: column;
+    }
+
+    .footer_bottom p {
+        font-size: 10px;
+    }
+
+
+}

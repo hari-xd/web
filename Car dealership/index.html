@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Dealership</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav_wrapper" id="nav-wrapper">
+            <div class="nav_bar" id="nav-bar">
+                <p><a href="index.html">BoxCars</a></p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="listing.html">Listings</a></li>
+                    <li><a href="#choose-me" class="scroll-link">About</a></li>
+                    <li>
+                        <h4><a href="#contact-left" class="scroll-link">Contact</a></h4>
+                    </li>
+                </ul>
+                <div class="menu">
+                    <img src="../../assets/menu1.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="index_content">
+            <div class="hero_section" id="hero-section">
+                <img src='../../assets/hero.png' alt="image">
+                <h4>find cars for sale and rent near you</h4>
+                <h1>find your perfect <span>vehicle</span></h1>
+
+            </div>
+
+            <div class="model" id="car-model">
+                <h1>Select your type</h1>
+                <div class="model_img" id="model-img">
+                    <div class="car" data-type="sedan">
+                        <a href="listing.html?type=sedan">
+                            <img src="../../assets/sedan.png" alt="">
+                            <p>Sedan</p>
+                        </a>
+                    </div>
+                    <div class="car" data-type="coupe">
+                        <a href="listing.html?type=coupe">
+                            <img src="../../assets/coupe.png" alt="">
+                            <p>Coupe</p>
+                        </a>
+                    </div>
+                    <div class="car" data-type="hatchback">
+                        <a href="listing.html?type=hatchback">
+                            <img src="../../assets/hatchback.png" alt="">
+                            <p>Hatchback</p>
+                        </a>
+                    </div>
+                    <div class="car" data-type="suv">
+                        <a href="listing.html?type=suv">
+                            <img src="../../assets/suv.png" alt="">
+                            <p>SUV</p>
+                        </a>
+                    </div>
+                    <div class="car" data-type="truck">
+                        <a href="listing.html?type=truck">
+                            <img src="../../assets/truck.png" alt="">
+                            <p>Truck</p>
+                        </a>
+                    </div>
+                    <div class="car" data-type="convertible">
+                        <a href="listing.html?type=convertible">
+                            <img src="../../assets/convertable.png" alt="">
+                            <p>Convertible</p>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="choose_me" id="choose-me">
+                <h1>why we are best in our field</h1>
+                <div class="choose_cards">
+                    <div class="choose_card">
+                        <img src="../../assets/finance.png" alt="">
+                        <div class="card-text">
+                            <h2>Special Financing Offers</h2>
+                            <p>Our stress-free finance department that can find financial solutions to save you
+                                money.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="choose_card">
+                        <img src="../../assets/pricing.png" alt="">
+                        <div class="card-text">
+                            <h2>transparent pricing</h2>
+                            <p>Our stress-free finance department that can find financial solutions to save you
+                                money.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="choose_card">
+                        <img src="../../assets/service.png" alt="">
+                        <div class="card-text">
+                            <h2>Expert car service</h2>
+                            <p>Our stress-free finance department that can find financial solutions to
+                                save you
+                                money.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="searched_cars" id="searched-cars">
+                <div class="search_title" id="search-title">
+                    <h1>the most searched cars</h1>
+                    <ul>
+                        <li class="car-type sedan-car car-type-active">Sedan
+                            <hr class="specific_underline">
+                        </li>
+                        <li class="car-type coupe-car">Coupe
+                            <hr class="specific_underline">
+                        </li>
+                        <li class="car-type hatchback-car">Hatchback
+                            <hr class="specific_underline">
+                        </li>
+                        <li class="car-type suv-car">SUV
+                            <hr class="specific_underline">
+                        </li>
+                        <li class="car-type truck-car">Truck
+                            <hr class="specific_underline">
+                        </li>
+                        <li class="car-type convertible-car" id="conv_car">Convertible
+                            <hr class="specific_underline">
+                        </li>
+
+                    </ul>
+                    <p><a href="listing.html">View all</a></p>
+
+                    <hr class="underline">
+
+                </div>
+
+                <div class="car_cards_container">
+                    <div class="car_cards" id="car-cards">
+                    </div>
+                    <div class="nav_btn" id="nav-btn">
+                        <img id="nav-left-btn" src="../../assets/left.png" alt="">
+
+                        <img id="nav-right-btn" src="../../assets/right.png" alt="">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="buy_sell">
+                <div class="buy">
+                    <div class="buy_left">
+                        <h3>Are you looking to buy a car ?</h3>
+                        <p>We are committed to provide our customers with exceptional experiences</p>
+                        <button><a href="listing.html">Get Started </a><img src="../../assets/arrow_left.png"
+                                alt=""></button>
+                    </div>
+                    <div class="buy_right">
+                        <img src="../../assets/buy.png" alt="">
+                    </div>
+                </div>
+
+                <div class="sell">
+                    <div class="sell_left">
+                        <h3>Do You Want to
+                            Rent a Car ?</h3>
+                        <p>We are committed to provide our customers with exceptional experiences</p>
+                        <button><a href="listing.html">Get Started </a><img src="../../assets/arrow_left.png"
+                                alt=""></button>
+                    </div>
+                    <div class="sell_right">
+                        <img src="../../assets/sell.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="statistics" id="statistics">
+
+
+            </div>
+
+            <div class="testimonials">
+                <h1>What our customers say</h1>
+                <div class="review_cars" id="review-cars">
+
+                </div>
+                <div class="nav_btn" id="nav-btn">
+                    <img id="review-nav-left-btn" src="../../assets/left.png" alt="Left">
+                    <img id="review-nav-right-btn" src="../../assets/right.png" alt="Right">
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="contact">
+            <div class="contact_top">
+                <h1>Contact Us</h1>
+                <img src="../../assets/map.png" alt="Map">
+            </div>
+            <div class="contact_bottom">
+                <div class="contact_left" id="contact-left">
+                    <h1>Get In Touch</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat molestias ab officiis
+                        itaquesintsuntlaboriosam vitae doloribus inventore corrupti?</p>
+                    <form action="" class="form">
+                        <div class="form-group">
+                            <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                            <input type="text" id="last-name" name="last-name" placeholder="Last Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                            <input type="text" id="contact" name="contact" placeholder="Contact Number" required>
+                        </div>
+                        <textarea id="message" name="message" placeholder="Message"></textarea>
+                        <button class="form-btn" type="submit">Contact Us</button>
+                    </form>
+
+
+
+                </div>
+
+                <div class="contact_right">
+                    <h1>Contact Details</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed nulla magnam distinctio, nihil
+                        soluta
+                        maxime necessitatibus quidem dignissimos pariatur. Accusantium natus sequi et hic non.
+                    </p>
+                    <div class="details_partition">
+                        <div class="left_column">
+                            <div class="address">
+                                <h3>Address</h3>
+                                <p>123 Queensberry Street,<br> North Melbourne VIC 3051,<br> Australia.</p>
+                            </div>
+                            <div class="email">
+                                <h3>Email</h3>
+                                <p>contact@example.com</p>
+                            </div>
+                        </div>
+                        <div class="right_column">
+                            <div class="phone">
+                                <h3>Phone</h3>
+                                <p>+1 234 567 890</p>
+                            </div>
+                            <div class="social">
+                                <h3>Follow Us</h3>
+                                <div class="link">
+                                    <p><a href="https://www.instagram.com">Instagram</a></p>
+                                    <p><a href="https://www.facebook.com">Facebook</a></p>
+                                    <p><a href="https://www.twitter.com">Twitter</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer_contents">
+                <div class="footer_title">
+                    <h1>Join Boxcars</h1>
+                    <p>Receive updates, shoping tips & more</p>
+                </div>
+                <div class="mail_button">
+                    <input type="text" placeholder="Enter your email">
+                    <button>Sign up</button>
+                </div>
+            </div>
+
+            <div class="footer_bottom">
+                <p>© 2024 Boxcars.com. All rights reserved.</p>
+                <div class="terms">
+                    <p>Terms and conditions</p>
+                    <p>Privacy notice</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+
+</html>
